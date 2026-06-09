@@ -52,7 +52,7 @@ class _ListaVoluntariosScreenState extends State<ListaVoluntariosScreen> {
             padding: const EdgeInsets.fromLTRB(16, 12, 16, 8),
             child: SearchBar(
               controller: _searchCtrl,
-              hintText: 'Buscar por nombre o cédula...',
+              hintText: 'Buscar por nombre o email...',
               leading: const Icon(Icons.search),
               trailing: _searchCtrl.text.isNotEmpty
                   ? [

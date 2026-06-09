@@ -5,6 +5,7 @@ import '../../data/models/voluntario.dart';
 import '../../data/repositories/sgftp_repository.dart';
 import '../widgets/common_widgets.dart';
 import '../../theme/app_theme.dart';
+import '../../utils/date_formatter.dart';
 
 class DetalleActividadScreen extends StatefulWidget {
   final int actividadId;
@@ -32,7 +33,7 @@ class _DetalleActividadScreenState extends State<DetalleActividadScreen> {
     try {
       final repo = SgftpRepository.instance;
       final a = await repo.getActividad(widget.actividadId);
-      final vs = await repo.getVoluntariosByIds(a.voluntariosIds);
+      final vs = await repo.getVoluntariosByActividadId(widget.actividadId);
       setState(() {
         _actividad = a;
         _voluntarios = vs;

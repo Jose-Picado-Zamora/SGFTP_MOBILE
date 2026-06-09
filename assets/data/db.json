@@ -1,399 +1,291 @@
 {
-  "projects": [
+  "project": [
     {
-      "id_project": 1,
-      "name": "Reforestación Manglar Nicoya",
-      "slug": "reforestacion-manglar-nicoya",
-      "description": "Proyecto de recuperación del ecosistema de manglar en las costas de Nicoya mediante siembra de mangle rojo, blanco y negro.",
-      "observations": "Incluye monitoreo mensual de biodiversidad y capacitación a comunidades locales. Alianza con comunidad indígena de Barra Honda.",
-      "aim": "Recuperar 500 hectáreas de manglar antes de 2026",
-      "start_date": "2025-01-15T00:00:00.000000"
+      "Id_project": 1,
+      "Name": "Reforestación Manglar Nicoya",
+      "Slug": "reforestacion-manglar-nicoya",
+      "Description": "Proyecto de recuperación del ecosistema de manglar mediante siembra de especies nativas",
+      "Observations": "Incluye monitoreo de biodiversidad y capacitación comunitaria. Alianza con comunidades locales.",
+      "Aim": "Recuperar 500 hectáreas de manglar antes de 2026",
+      "Start_date": "2025-01-15T00:00:00",
+      "End_date": "2026-12-31T23:59:59",
+      "Registration_date": "2025-01-10T10:30:00.000000",
+      "UpdatedAt": "2026-06-09T14:22:15.000000",
+      "Status": "execution",
+      "Target_population": "Comunidades costeras de Nicoya",
+      "Location": "Nicoya, Guanacaste",
+      "METRIC_TOTAL_BENEFICIATED": 250,
+      "METRIC_TOTAL_WASTE_COLLECTED": 0,
+      "METRIC_TOTAL_TREES_PLANTED": 5000,
+      "Active": 1,
+      "url_1": "https://example.com/manglar-1.jpg",
+      "url_2": "https://example.com/manglar-2.jpg",
+      "url_3": null,
+      "url_4": null,
+      "url_5": null,
+      "url_6": null
     },
     {
-      "id_project": 2,
-      "name": "Educación Ambiental Escuelas Chorotega",
-      "slug": "educacion-ambiental-chorotega",
-      "description": "Programa de visitas educativas a 12 escuelas de la región Chorotega para fomentar la conciencia ambiental.",
-      "observations": "Se desarrollan talleres interactivos sobre biodiversidad, agua y manejo de residuos. Alcance: 2500 estudiantes aproximadamente.",
-      "aim": "Alcanzar 1200 estudiantes con contenido ambiental",
-      "start_date": "2025-03-01T00:00:00.000000"
+      "Id_project": 2,
+      "Name": "Educación Ambiental Escuelas Chorotega",
+      "Slug": "educacion-ambiental-chorotega",
+      "Description": "Programa de educación ambiental en 12 escuelas de primaria de la región Chorotega",
+      "Observations": "Talleres interactivos sobre biodiversidad, agua y manejo de residuos con estudiantes",
+      "Aim": "Impactar 1200 estudiantes con contenido ambiental",
+      "Start_date": "2025-03-01T00:00:00",
+      "End_date": "2025-11-30T23:59:59",
+      "Registration_date": "2025-02-20T09:15:00.000000",
+      "UpdatedAt": "2026-06-05T11:45:30.000000",
+      "Status": "execution",
+      "Target_population": "Estudiantes de primaria, Docentes",
+      "Location": "Región Chorotega, Guanacaste",
+      "METRIC_TOTAL_BENEFICIATED": 1200,
+      "METRIC_TOTAL_WASTE_COLLECTED": 0,
+      "METRIC_TOTAL_TREES_PLANTED": 0,
+      "Active": 1,
+      "url_1": "https://example.com/educacion-1.jpg",
+      "url_2": null,
+      "url_3": null,
+      "url_4": null,
+      "url_5": null,
+      "url_6": null
     },
     {
-      "id_project": 3,
-      "name": "Limpieza de Playas Carrillo",
-      "slug": "limpieza-playas-carrillo",
-      "description": "Campaña trimestral de limpieza de playas del Pacífico Norte con participación comunitaria.",
-      "observations": "Se recolectó y clasificó más de 2 toneladas de residuos durante las tres jornadas realizadas. Colaboración con operadores turísticos.",
-      "aim": "Mantener playas limpias durante todo el año",
-      "start_date": "2024-07-01T00:00:00.000000"
-    },
-    {
-      "id_project": 4,
-      "name": "Monitoreo Tortugas Baulas",
-      "slug": "monitoreo-tortugas-baulas",
-      "description": "Programa nocturno de monitoreo y protección de nidos de tortuga baula en playa Ostional.",
-      "observations": "Incluye conteo de hembras anidantes, marcaje y registro de datos de incubación. Temporada alta: junio a diciembre.",
-      "aim": "Proteger 10000 nidos en la temporada 2025-2026",
-      "start_date": "2025-06-01T00:00:00.000000"
-    },
-    {
-      "id_project": 5,
-      "name": "Huertos Comunitarios Nicoya",
-      "slug": "huertos-comunitarios-nicoya",
-      "description": "Establecimiento de huertos orgánicos en cinco comunidades rurales de Nicoya.",
-      "observations": "Promueve la seguridad alimentaria y técnicas de agricultura sostenible. Beneficiarios: 150 familias rurales.",
-      "aim": "Crear 5 huertos productivos en comunidades rurales",
-      "start_date": "2025-02-01T00:00:00.000000"
-    },
-    {
-      "id_project": 6,
-      "name": "Conservación de Bosque Seco Tropical",
-      "slug": "conservacion-bosque-seco",
-      "description": "Protección y restauración del bosque seco tropical en la Península de Santa Elena.",
-      "observations": "Especie endémica: Guanacaste. Investigación científica con Universidad de Costa Rica.",
-      "aim": "Proteger 2000 hectáreas de bosque seco",
-      "start_date": "2025-04-10T00:00:00.000000"
+      "Id_project": 3,
+      "Name": "Limpieza de Playas Carrillo",
+      "Slug": "limpieza-playas-carrillo",
+      "Description": "Campaña trimestral de limpieza de playas del Pacífico Norte con participación comunitaria",
+      "Observations": "Se recolectaron más de 2 toneladas de residuos. Colaboración con operadores turísticos.",
+      "Aim": "Mantener playas limpias durante todo el año",
+      "Start_date": "2024-07-01T00:00:00",
+      "End_date": null,
+      "Registration_date": "2024-06-15T08:00:00.000000",
+      "UpdatedAt": "2026-06-08T16:30:22.000000",
+      "Status": "finished",
+      "Target_population": "Comunidad general, Voluntarios, Turistas",
+      "Location": "Playa Carrillo, Guanacaste",
+      "METRIC_TOTAL_BENEFICIATED": 150,
+      "METRIC_TOTAL_WASTE_COLLECTED": 2000,
+      "METRIC_TOTAL_TREES_PLANTED": 0,
+      "Active": 1,
+      "url_1": "https://example.com/playas-1.jpg",
+      "url_2": "https://example.com/playas-2.jpg",
+      "url_3": null,
+      "url_4": null,
+      "url_5": null,
+      "url_6": null
     }
   ],
-  "activities": [
+  "activity": [
     {
-      "id_activity": 1,
-      "name": "Siembra Zona Norte Manglar",
-      "description": "Siembra de 500 plantones de mangle rojo en el sector norte del manglar. Participaron 15 voluntarios en jornada de 8 horas con guía de biólogo marino.",
-      "is_recurring": 0,
-      "is_favorite": 1,
-      "open_for_registration": 1,
-      "registration_date": "2025-02-15T15:27:18.624739"
+      "Id_activity": 1,
+      "Name": "Siembra Zona Norte Manglar",
+      "Description": "Siembra de 500 plantones de mangle rojo en el sector norte del manglar",
+      "IsRecurring": 0,
+      "IsFavorite": "1",
+      "OpenForRegistration": 1,
+      "Registration_date": "2025-02-15T15:27:18.000000",
+      "UpdatedAt": "2025-02-15T15:27:18.000000",
+      "Type_activity": "Siembra",
+      "Status_activity": "execution",
+      "Approach": "Participativo",
+      "Spaces": 20,
+      "Location": "Manglar Nicoya, Sector Norte",
+      "Metric_activity": "Plantones sembrados",
+      "Total_metric_value": 500,
+      "Active": 1,
+      "url1": "https://example.com/siembra-1.jpg",
+      "url2": null,
+      "url3": null,
+      "Enrolled_count": 15
     },
     {
-      "id_activity": 2,
-      "name": "Monitoreo Biodiversidad Trimestral",
-      "description": "Levantamiento de inventario de fauna y flora en las zonas de siembra del trimestre anterior. Se registran aves, crustáceos y peces mediante transectos y puntos de conteo.",
-      "is_recurring": 1,
-      "is_favorite": 1,
-      "open_for_registration": 1,
-      "registration_date": "2025-06-01T10:00:00.000000"
+      "Id_activity": 2,
+      "Name": "Monitoreo Biodiversidad Trimestral",
+      "Description": "Levantamiento de inventario de fauna y flora en las zonas de siembra",
+      "IsRecurring": 1,
+      "IsFavorite": "1",
+      "OpenForRegistration": 1,
+      "Registration_date": "2025-06-01T10:00:00.000000",
+      "UpdatedAt": "2025-06-01T10:00:00.000000",
+      "Type_activity": "Monitoreo",
+      "Status_activity": "planning",
+      "Approach": "Científico",
+      "Spaces": 10,
+      "Location": "Manglar Nicoya",
+      "Metric_activity": "Especies registradas",
+      "Total_metric_value": 45,
+      "Active": 1,
+      "url1": "https://example.com/monitoreo-1.jpg",
+      "url2": null,
+      "url3": null,
+      "Enrolled_count": 8
     },
     {
-      "id_activity": 3,
-      "name": "Taller Comunidad Pescadores",
-      "description": "Taller de sensibilización para pescadores locales sobre la importancia del manglar como zona de reproducción y su relación con la pesca sostenible.",
-      "is_recurring": 0,
-      "is_favorite": 0,
-      "open_for_registration": 0,
-      "registration_date": "2025-07-10T08:30:00.000000"
+      "Id_activity": 3,
+      "Name": "Taller Escuela Central Nicoya",
+      "Description": "Taller interactivo de educación ambiental con 120 estudiantes de primaria",
+      "IsRecurring": 0,
+      "IsFavorite": "1",
+      "OpenForRegistration": 1,
+      "Registration_date": "2025-03-20T14:15:00.000000",
+      "UpdatedAt": "2025-03-20T14:15:00.000000",
+      "Type_activity": "Educación",
+      "Status_activity": "finished",
+      "Approach": "Educativo",
+      "Spaces": 5,
+      "Location": "Escuela Central Nicoya",
+      "Metric_activity": "Estudiantes impactados",
+      "Total_metric_value": 120,
+      "Active": 1,
+      "url1": null,
+      "url2": null,
+      "url3": null,
+      "Enrolled_count": 3
     },
     {
-      "id_activity": 4,
-      "name": "Visita Escuela Central Nicoya",
-      "description": "Taller interactivo de educación ambiental con 120 estudiantes de primaria. Actividades de clasificación de residuos, lectura de cuentos ecológicos y manualidades con materiales reciclados.",
-      "is_recurring": 0,
-      "is_favorite": 1,
-      "open_for_registration": 1,
-      "registration_date": "2025-03-20T14:15:00.000000"
-    },
-    {
-      "id_activity": 5,
-      "name": "Visita Escuela Sámara",
-      "description": "Segunda visita del programa a la escuela de Sámara con enfoque en cuidado del mar y los arrecifes de coral con presentación de video.",
-      "is_recurring": 0,
-      "is_favorite": 0,
-      "open_for_registration": 1,
-      "registration_date": "2025-06-05T09:00:00.000000"
-    },
-    {
-      "id_activity": 6,
-      "name": "Jornada Limpieza Playa Carrillo",
-      "description": "Primera jornada de limpieza con participación de 40 voluntarios y 60 estudiantes universitarios. Se recolectaron 850 kg de residuos sólidos clasificados en plástico, vidrio y metal.",
-      "is_recurring": 0,
-      "is_favorite": 0,
-      "open_for_registration": 0,
-      "registration_date": "2024-09-10T12:00:00.000000"
-    },
-    {
-      "id_activity": 7,
-      "name": "Jornada Limpieza Playa Guiones",
-      "description": "Segunda jornada en Playa Guiones con colaboración de surfistas locales y operadores turísticos. Se recolectaron 1,150 kg de residuos y se colocaron señales informativas.",
-      "is_recurring": 0,
-      "is_favorite": 0,
-      "open_for_registration": 0,
-      "registration_date": "2024-11-05T10:30:00.000000"
-    },
-    {
-      "id_activity": 8,
-      "name": "Primera Noche de Monitoreo",
-      "description": "Inicio del monitoreo nocturno en temporada alta de anidamiento. Equipos de 3 voluntarios rotan en turnos de 4 horas para registro de tortugas, medición de huellas y protección de nidos.",
-      "is_recurring": 1,
-      "is_favorite": 0,
-      "open_for_registration": 1,
-      "registration_date": "2025-06-01T18:00:00.000000"
-    },
-    {
-      "id_activity": 9,
-      "name": "Preparación de Terrenos Huertos",
-      "description": "Limpieza y preparación de los cinco terrenos comunitarios asignados para los huertos. Análisis de suelo y trazado de camas de cultivo.",
-      "is_recurring": 0,
-      "is_favorite": 0,
-      "open_for_registration": 0,
-      "registration_date": "2025-02-20T08:00:00.000000"
-    },
-    {
-      "id_activity": 10,
-      "name": "Taller de Compostaje",
-      "description": "Capacitación a familias beneficiarias sobre elaboración de compost casero y lombricultura para mejorar la fertilidad del suelo sin insumos químicos.",
-      "is_recurring": 1,
-      "is_favorite": 1,
-      "open_for_registration": 1,
-      "registration_date": "2025-07-15T10:00:00.000000"
-    },
-    {
-      "id_activity": 11,
-      "name": "Censo de Fauna Bosque Seco",
-      "description": "Recorrido de monitoreo para identificar y registrar especies de fauna presente en el bosque seco. Se utiliza metodología de transectos lineales.",
-      "is_recurring": 1,
-      "is_favorite": 0,
-      "open_for_registration": 1,
-      "registration_date": "2025-04-15T07:00:00.000000"
-    },
-    {
-      "id_activity": 12,
-      "name": "Vivero de Plantas Nativas",
-      "description": "Propagación y cultivo de plantas nativas del bosque seco para futuras reforestaciones. Capacitación en técnicas de propagación.",
-      "is_recurring": 1,
-      "is_favorite": 1,
-      "open_for_registration": 1,
-      "registration_date": "2025-05-01T09:00:00.000000"
+      "Id_activity": 4,
+      "Name": "Jornada Limpieza Playa Carrillo",
+      "Description": "Limpieza de playa con recolección y clasificación de residuos",
+      "IsRecurring": 0,
+      "IsFavorite": "0",
+      "OpenForRegistration": 0,
+      "Registration_date": "2024-09-10T12:00:00.000000",
+      "UpdatedAt": "2024-09-14T17:30:00.000000",
+      "Type_activity": "Limpieza",
+      "Status_activity": "finished",
+      "Approach": "Comunitario",
+      "Spaces": 50,
+      "Location": "Playa Carrillo",
+      "Metric_activity": "Kg de residuos recolectados",
+      "Total_metric_value": 850,
+      "Active": 1,
+      "url1": "https://example.com/limpieza-1.jpg",
+      "url2": null,
+      "url3": null,
+      "Enrolled_count": 40
     }
   ],
-  "date_activities": [
+  "date_activity": [
     {
-      "id_date_activity": 1,
-      "start_date": "2026-03-29T08:00:00.000000",
-      "end_date": "2026-03-29T12:00:00.000000",
-      "id_activity": 1
+      "Id_dateActivity": 1,
+      "Start_date": "2025-02-20T08:00:00",
+      "End_date": "2025-02-20T12:00:00",
+      "Id_activity": 1
     },
     {
-      "id_date_activity": 2,
-      "start_date": "2026-05-29T10:00:00.000000",
-      "end_date": "2026-05-30T14:00:00.000000",
-      "id_activity": 2
+      "Id_dateActivity": 2,
+      "Start_date": "2025-06-10T09:00:00",
+      "End_date": "2025-06-10T13:00:00",
+      "Id_activity": 2
     },
     {
-      "id_date_activity": 3,
-      "start_date": "2026-06-10T08:00:00.000000",
-      "end_date": "2026-06-10T12:00:00.000000",
-      "id_activity": 4
+      "Id_dateActivity": 3,
+      "Start_date": "2025-03-25T09:00:00",
+      "End_date": "2025-03-25T12:00:00",
+      "Id_activity": 3
     },
     {
-      "id_date_activity": 4,
-      "start_date": "2026-06-12T09:00:00.000000",
-      "end_date": "2026-06-12T13:00:00.000000",
-      "id_activity": 5
-    },
-    {
-      "id_date_activity": 5,
-      "start_date": "2026-06-15T18:00:00.000000",
-      "end_date": "2026-06-16T06:00:00.000000",
-      "id_activity": 8
-    },
-    {
-      "id_date_activity": 6,
-      "start_date": "2026-07-05T08:30:00.000000",
-      "end_date": "2026-07-05T12:30:00.000000",
-      "id_activity": 10
-    },
-    {
-      "id_date_activity": 7,
-      "start_date": "2026-07-20T06:00:00.000000",
-      "end_date": "2026-07-20T10:00:00.000000",
-      "id_activity": 11
-    },
-    {
-      "id_date_activity": 8,
-      "start_date": "2026-08-10T09:00:00.000000",
-      "end_date": "2026-08-10T13:00:00.000000",
-      "id_activity": 12
+      "Id_dateActivity": 4,
+      "Start_date": "2024-09-14T08:30:00",
+      "End_date": "2024-09-14T14:30:00",
+      "Id_activity": 4
     }
   ],
-  "activity_enrollments": [
+  "activity_enrollment": [
     {
       "id_enrollment_activity": 1,
       "id_volunteer": 1,
       "id_activity": 1,
-      "enrollment_date": "2026-03-14T15:37:00.263562",
+      "enrollment_date": "2025-02-15T15:45:00.000000",
       "status": "attended",
-      "attendance_date": "2026-03-29T08:30:00.000000",
-      "updated_at": "2026-03-29T14:00:00.000000"
+      "attendance_date": "2025-02-20T08:15:00",
+      "updated_at": "2025-02-20T14:30:00.000000"
     },
     {
       "id_enrollment_activity": 2,
       "id_volunteer": 2,
       "id_activity": 1,
-      "enrollment_date": "2026-03-14T16:00:00.000000",
+      "enrollment_date": "2025-02-16T10:30:00.000000",
       "status": "attended",
-      "attendance_date": "2026-03-29T08:15:00.000000",
-      "updated_at": "2026-03-29T14:00:00.000000"
+      "attendance_date": "2025-02-20T08:10:00",
+      "updated_at": "2025-02-20T14:30:00.000000"
     },
     {
       "id_enrollment_activity": 3,
       "id_volunteer": 3,
       "id_activity": 2,
-      "enrollment_date": "2026-03-15T10:00:00.000000",
-      "status": "attended",
-      "attendance_date": "2026-05-29T10:20:00.000000",
-      "updated_at": "2026-05-30T15:00:00.000000"
+      "enrollment_date": "2025-06-01T10:15:00.000000",
+      "status": "enrolled",
+      "attendance_date": null,
+      "updated_at": "2025-06-01T10:15:00.000000"
     },
     {
       "id_enrollment_activity": 4,
       "id_volunteer": 4,
-      "id_activity": 4,
-      "enrollment_date": "2026-03-20T14:30:00.000000",
+      "id_activity": 3,
+      "enrollment_date": "2025-03-20T14:30:00.000000",
       "status": "attended",
-      "attendance_date": "2026-06-10T08:45:00.000000",
-      "updated_at": "2026-06-10T13:00:00.000000"
+      "attendance_date": "2025-03-25T09:30:00",
+      "updated_at": "2025-03-25T13:00:00.000000"
     },
     {
       "id_enrollment_activity": 5,
       "id_volunteer": 5,
-      "id_activity": 5,
-      "enrollment_date": "2026-03-25T09:00:00.000000",
-      "status": "pending",
-      "attendance_date": null,
-      "updated_at": "2026-03-25T09:00:00.000000"
+      "id_activity": 4,
+      "enrollment_date": "2024-09-10T13:00:00.000000",
+      "status": "attended",
+      "attendance_date": "2024-09-14T09:00:00",
+      "updated_at": "2024-09-14T15:30:00.000000"
     },
     {
       "id_enrollment_activity": 6,
-      "id_volunteer": 6,
-      "id_activity": 8,
-      "enrollment_date": "2026-06-01T18:30:00.000000",
-      "status": "attended",
-      "attendance_date": "2026-06-15T18:45:00.000000",
-      "updated_at": "2026-06-16T07:00:00.000000"
-    },
-    {
-      "id_enrollment_activity": 7,
-      "id_volunteer": 7,
-      "id_activity": 3,
-      "enrollment_date": "2026-03-28T11:00:00.000000",
-      "status": "cancelled",
-      "attendance_date": null,
-      "updated_at": "2026-04-01T10:00:00.000000"
-    },
-    {
-      "id_enrollment_activity": 8,
-      "id_volunteer": 8,
-      "id_activity": 6,
-      "enrollment_date": "2026-03-15T12:00:00.000000",
-      "status": "attended",
-      "attendance_date": "2026-03-20T14:00:00.000000",
-      "updated_at": "2026-03-20T17:00:00.000000"
-    },
-    {
-      "id_enrollment_activity": 9,
       "id_volunteer": 1,
-      "id_activity": 10,
-      "enrollment_date": "2026-05-20T10:00:00.000000",
+      "id_activity": 4,
+      "enrollment_date": "2024-09-11T10:00:00.000000",
       "status": "attended",
-      "attendance_date": "2026-07-05T09:00:00.000000",
-      "updated_at": "2026-07-05T13:00:00.000000"
-    },
-    {
-      "id_enrollment_activity": 10,
-      "id_volunteer": 3,
-      "id_activity": 11,
-      "enrollment_date": "2026-06-10T08:00:00.000000",
-      "status": "pending",
-      "attendance_date": null,
-      "updated_at": "2026-06-10T08:00:00.000000"
+      "attendance_date": "2024-09-14T08:45:00",
+      "updated_at": "2024-09-14T15:30:00.000000"
     }
   ],
   "volunteers": [
     {
       "id_volunteer": 1,
       "is_active": 1,
-      "registration_date": "2026-03-14T15:22:21.245159",
-      "updated_at": "2026-03-14T15:28:49.000000",
+      "registration_date": "2025-01-20T10:15:22.000000",
+      "updated_at": "2025-02-20T14:30:00.000000",
       "id_person": 7
     },
     {
       "id_volunteer": 2,
       "is_active": 1,
-      "registration_date": "2026-05-24T16:49:36.238543",
-      "updated_at": "2026-05-24T16:49:36.238543",
-      "id_person": 16
+      "registration_date": "2025-02-10T14:30:15.000000",
+      "updated_at": "2025-02-16T10:30:00.000000",
+      "id_person": 8
     },
     {
       "id_volunteer": 3,
       "is_active": 1,
-      "registration_date": "2026-05-24T17:25:11.295120",
-      "updated_at": "2026-05-24T17:25:11.295120",
-      "id_person": 17
+      "registration_date": "2025-05-25T09:45:20.000000",
+      "updated_at": "2025-06-01T10:15:00.000000",
+      "id_person": 9
     },
     {
       "id_volunteer": 4,
       "is_active": 1,
-      "registration_date": "2026-05-24T17:25:39.729899",
-      "updated_at": "2026-05-24T17:25:39.729899",
-      "id_person": 18
+      "registration_date": "2025-03-15T11:20:10.000000",
+      "updated_at": "2025-03-20T14:30:00.000000",
+      "id_person": 10
     },
     {
       "id_volunteer": 5,
-      "is_active": 0,
-      "registration_date": "2026-05-24T17:30:07.918867",
-      "updated_at": "2026-06-10T10:00:00.000000",
-      "id_person": 19
-    },
-    {
-      "id_volunteer": 6,
       "is_active": 1,
-      "registration_date": "2026-05-24T18:06:47.036748",
-      "updated_at": "2026-05-24T18:06:47.036748",
-      "id_person": 20
-    },
-    {
-      "id_volunteer": 7,
-      "is_active": 1,
-      "registration_date": "2026-05-24T18:08:57.743592",
-      "updated_at": "2026-05-24T18:16:59.000000",
-      "id_person": 21
-    },
-    {
-      "id_volunteer": 8,
-      "is_active": 1,
-      "registration_date": "2026-05-24T18:13:27.182107",
-      "updated_at": "2026-05-24T18:16:59.000000",
-      "id_person": 22
-    },
-    {
-      "id_volunteer": 9,
-      "is_active": 1,
-      "registration_date": "2026-05-24T18:20:40.554542",
-      "updated_at": "2026-05-24T18:21:03.587105",
-      "id_person": 23
-    },
-    {
-      "id_volunteer": 10,
-      "is_active": 1,
-      "registration_date": "2026-05-24T18:21:03.587105",
-      "updated_at": "2026-05-24T18:23:05.000000",
-      "id_person": 24
-    },
-    {
-      "id_volunteer": 11,
-      "is_active": 1,
-      "registration_date": "2026-06-01T09:15:22.458932",
-      "updated_at": "2026-06-05T14:30:00.000000",
-      "id_person": 25
-    },
-    {
-      "id_volunteer": 12,
-      "is_active": 1,
-      "registration_date": "2026-06-05T14:45:33.567841",
-      "updated_at": "2026-06-10T11:20:00.000000",
-      "id_person": 26
+      "registration_date": "2024-08-30T08:00:00.000000",
+      "updated_at": "2024-09-14T15:30:00.000000",
+      "id_person": 11
     }
   ],
-  "persons": [
+  "person": [
     {
       "id_person": 7,
       "first_name": "Carlos",
@@ -402,11 +294,12 @@
       "second_lastname": "Rojas",
       "email": "cmendoza@fundacion.org",
       "phone_primary": "+506 8834-5621",
-      "phone_secondary": "+506 2222-1234",
-      "created_at": "2026-03-12T12:00:00.000000"
+      "phone_secondary": "+506 2222-1111",
+      "created_at": "2025-01-20T10:15:22.000000",
+      "updated_at": "2025-02-20T14:30:00.000000"
     },
     {
-      "id_person": 16,
+      "id_person": 8,
       "first_name": "Sofía",
       "second_name": "María",
       "first_lastname": "Herrera",
@@ -414,21 +307,23 @@
       "email": "sherrera@fundacion.org",
       "phone_primary": "+506 7712-3398",
       "phone_secondary": null,
-      "created_at": "2026-03-12T12:00:00.000000"
+      "created_at": "2025-02-10T14:30:15.000000",
+      "updated_at": "2025-02-10T14:30:15.000000"
     },
     {
-      "id_person": 17,
+      "id_person": 9,
       "first_name": "Diego",
       "second_name": "José",
       "first_lastname": "Morales",
       "second_lastname": "Castro",
       "email": "dmorales@fundacion.org",
       "phone_primary": "+506 8990-4412",
-      "phone_secondary": "+506 6666-5555",
-      "created_at": "2026-03-12T12:00:00.000000"
+      "phone_secondary": "+506 3333-5555",
+      "created_at": "2025-05-25T09:45:20.000000",
+      "updated_at": "2025-06-01T10:15:00.000000"
     },
     {
-      "id_person": 18,
+      "id_person": 10,
       "first_name": "Laura",
       "second_name": "Catalina",
       "first_lastname": "Jiménez",
@@ -436,10 +331,11 @@
       "email": "ljimenez@fundacion.org",
       "phone_primary": "+506 8221-6754",
       "phone_secondary": null,
-      "created_at": "2026-03-12T12:00:00.000000"
+      "created_at": "2025-03-15T11:20:10.000000",
+      "updated_at": "2025-03-20T14:30:00.000000"
     },
     {
-      "id_person": 19,
+      "id_person": 11,
       "first_name": "Andrés",
       "second_name": "Felipe",
       "first_lastname": "Solano",
@@ -447,87 +343,11 @@
       "email": "asolano@fundacion.org",
       "phone_primary": "+506 7654-8832",
       "phone_secondary": null,
-      "created_at": "2026-03-12T12:00:00.000000"
-    },
-    {
-      "id_person": 20,
-      "first_name": "Valeria",
-      "second_name": "Alejandra",
-      "first_lastname": "Ramírez",
-      "second_lastname": "Torres",
-      "email": "vramirez@fundacion.org",
-      "phone_primary": "+506 8345-1167",
-      "phone_secondary": "+506 4444-9999",
-      "created_at": "2026-03-12T12:00:00.000000"
-    },
-    {
-      "id_person": 21,
-      "first_name": "Fabio",
-      "second_name": "Alberto",
-      "first_lastname": "Núñez",
-      "second_lastname": "Cordero",
-      "email": "fnunez@fundacion.org",
-      "phone_primary": "+506 7890-2234",
-      "phone_secondary": null,
-      "created_at": "2026-03-12T12:00:00.000000"
-    },
-    {
-      "id_person": 22,
-      "first_name": "Priscilla",
-      "second_name": "María",
-      "first_lastname": "Ulate",
-      "second_lastname": "Gamboa",
-      "email": "pulate@fundacion.org",
-      "phone_primary": "+506 8567-4490",
-      "phone_secondary": null,
-      "created_at": "2026-03-12T12:00:00.000000"
-    },
-    {
-      "id_person": 23,
-      "first_name": "Juan",
-      "second_name": "Carlos",
-      "first_lastname": "García",
-      "second_lastname": "López",
-      "email": "jgarcia@fundacion.org",
-      "phone_primary": "+506 8765-4321",
-      "phone_secondary": "+506 3333-7777",
-      "created_at": "2026-03-15T12:00:00.000000"
-    },
-    {
-      "id_person": 24,
-      "first_name": "Ana",
-      "second_name": "Lucía",
-      "first_lastname": "Vargas",
-      "second_lastname": "Soto",
-      "email": "avargas@fundacion.org",
-      "phone_primary": "+506 8901-2345",
-      "phone_secondary": null,
-      "created_at": "2026-03-15T12:00:00.000000"
-    },
-    {
-      "id_person": 25,
-      "first_name": "Miguel",
-      "second_name": "Ángel",
-      "first_lastname": "Rodríguez",
-      "second_lastname": "Fernández",
-      "email": "mrodriguez@fundacion.org",
-      "phone_primary": "+506 8234-5678",
-      "phone_secondary": "+506 5555-8888",
-      "created_at": "2026-06-01T09:00:00.000000"
-    },
-    {
-      "id_person": 26,
-      "first_name": "Elena",
-      "second_name": "Patricia",
-      "first_lastname": "Solís",
-      "second_lastname": "Mora",
-      "email": "esolis@fundacion.org",
-      "phone_primary": "+506 7777-1111",
-      "phone_secondary": null,
-      "created_at": "2026-06-05T14:30:00.000000"
+      "created_at": "2024-08-30T08:00:00.000000",
+      "updated_at": "2024-09-14T15:30:00.000000"
     }
   ],
-  "roles": [
+  "role": [
     {
       "id_role": 1,
       "name": "super_admin"
@@ -535,22 +355,6 @@
     {
       "id_role": 2,
       "name": "general_admin"
-    },
-    {
-      "id_role": 3,
-      "name": "fair_admin"
-    },
-    {
-      "id_role": 4,
-      "name": "content_admin"
-    },
-    {
-      "id_role": 5,
-      "name": "auditor"
-    },
-    {
-      "id_role": 6,
-      "name": "entrepreneur"
     },
     {
       "id_role": 7,
@@ -561,67 +365,23 @@
     {
       "id_user": 1,
       "id_person": 7,
-      "password": "$2b$12$MicGOkUjwYkmyahH5lhfus2CG43Oy9RW8u/nI5qK2xL9mNoPz.jZK",
+      "password": "$2b$12$MicGOkUjwYkmyahH5lhfus2CG43OyRW8u/nI5qK2xL9mNoPz.jZK",
       "status": 1,
       "is_email_verified": 1,
       "failed_login_attempts": 0,
-      "created_at": "2026-03-12T13:54:57.651932",
-      "updated_at": "2026-03-12T13:54:57.651932",
+      "created_at": "2025-01-20T10:15:22.000000",
+      "updated_at": "2025-02-20T14:30:00.000000",
       "activation_token": null
     },
     {
       "id_user": 2,
-      "id_person": 16,
+      "id_person": 8,
       "password": "$2b$12$C7u0ZE.2AalfsktfQlFy5cOZDkdPVoQFPm8x3nH7rJ2kL9pM0qN.Dy",
       "status": 1,
       "is_email_verified": 1,
       "failed_login_attempts": 0,
-      "created_at": "2026-03-12T13:54:58.004844",
-      "updated_at": "2026-03-12T13:54:58.004844",
-      "activation_token": null
-    },
-    {
-      "id_user": 3,
-      "id_person": 17,
-      "password": "$2b$12$2E.yHPv.lQCL4uxhtQd9AeH1X9UL9aQlZm4rS5tU6vW7xY8zA0bCd",
-      "status": 1,
-      "is_email_verified": 1,
-      "failed_login_attempts": 0,
-      "created_at": "2026-03-12T13:54:58.403316",
-      "updated_at": "2026-03-12T13:54:58.403316",
-      "activation_token": null
-    },
-    {
-      "id_user": 4,
-      "id_person": 18,
-      "password": "$2b$12$oIJ2GohYwTHNERi7U.rQPoGqf2afl9SX4vC5dE6fG7hI8jK9lM0nO",
-      "status": 1,
-      "is_email_verified": 1,
-      "failed_login_attempts": 0,
-      "created_at": "2026-03-12T13:54:59.332192",
-      "updated_at": "2026-03-12T13:54:59.332192",
-      "activation_token": null
-    },
-    {
-      "id_user": 5,
-      "id_person": 23,
-      "password": "$2b$12$P6.PBxsQXvFJYqXnzBs6ZusGoDc7sr.Ll9Mm8nN9oO0pP1qQ2rR3sT",
-      "status": 0,
-      "is_email_verified": 0,
-      "failed_login_attempts": 2,
-      "created_at": "2026-06-01T09:15:22.458932",
-      "updated_at": "2026-06-05T14:30:00.000000",
-      "activation_token": "9f38c50e0ecaa1fcdf44e8b8d9f5c4a9"
-    },
-    {
-      "id_user": 6,
-      "id_person": 26,
-      "password": "$2b$12$YxwOovzfSvGQrPCPel7.KQj5g3QlbmX1zZ4aB5cC6dD7eE8fF9gGh",
-      "status": 1,
-      "is_email_verified": 1,
-      "failed_login_attempts": 0,
-      "created_at": "2026-06-05T14:45:33.567841",
-      "updated_at": "2026-06-10T11:20:00.000000",
+      "created_at": "2025-02-10T14:30:15.000000",
+      "updated_at": "2025-02-10T14:30:15.000000",
       "activation_token": null
     }
   ]

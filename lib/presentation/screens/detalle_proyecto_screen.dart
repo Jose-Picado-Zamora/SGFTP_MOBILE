@@ -4,6 +4,7 @@ import '../../data/models/proyecto.dart';
 import '../../data/repositories/sgftp_repository.dart';
 import '../widgets/common_widgets.dart';
 import '../../theme/app_theme.dart';
+import '../../utils/date_formatter.dart';
 
 class DetalleProyectoScreen extends StatefulWidget {
   final int proyectoId;
@@ -101,8 +102,8 @@ class _DetalleProyectoScreenState extends State<DetalleProyectoScreen> {
             titulo: 'Fechas',
             child: Row(
               children: [
-                Expanded(child: _FechaItem('Inicio', p.fechaInicio, Icons.play_circle_outline)),
-                Expanded(child: _FechaItem('Fin estimado', p.fechaFinEstimada, Icons.flag_outlined)),
+                Expanded(child: _FechaItem('Inicio', formatearFecha(p.fechaInicio), Icons.play_circle_outline)),
+                Expanded(child: _FechaItem('Fin estimado', formatearFecha(p.fechaFinEstimada), Icons.flag_outlined)),
               ],
             ),
           ),

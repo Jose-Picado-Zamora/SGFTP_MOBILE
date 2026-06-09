@@ -7,6 +7,7 @@ class EstadoBadge extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final traducido = traductorEstado(estado);
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
       decoration: BoxDecoration(
@@ -15,7 +16,7 @@ class EstadoBadge extends StatelessWidget {
         border: Border.all(color: estadoColor(estado), width: 1),
       ),
       child: Text(
-        estado,
+        traducido,
         style: TextStyle(
           color: estadoColor(estado),
           fontSize: 12,
