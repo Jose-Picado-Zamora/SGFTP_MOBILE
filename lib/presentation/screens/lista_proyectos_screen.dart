@@ -4,6 +4,7 @@ import '../../data/models/proyecto.dart';
 import '../../data/repositories/sgftp_repository.dart';
 import '../widgets/common_widgets.dart';
 import '../../theme/app_theme.dart';
+import '../../utils/date_formatter.dart';
 
 class ListaProyectosScreen extends StatefulWidget {
   const ListaProyectosScreen({super.key});
@@ -19,7 +20,12 @@ class _ListaProyectosScreenState extends State<ListaProyectosScreen> {
   bool _loading = true;
   String? _error;
 
-  final _estados = ['Todos', 'Activo', 'Inactivo', 'Completado'];
+  final _estadosMap = {
+    'Todos': '',
+    'Ejecución': 'execution',
+    'Terminado': 'finished',
+    'Planificación': 'planning',
+  };
 
   @override
   void initState() {
@@ -37,8 +43,9 @@ class _ListaProyectosScreenState extends State<ListaProyectosScreen> {
   Future<void> _cargar() async {
     setState(() { _loading = true; _error = null; });
     try {
+      final estadoDb = _estadosMap[_estadoFiltro] ?? '';
       final data = await _repo.getProyectos(
-        estado: _estadoFiltro,
+        estado: estadoDb.isEmpty ? null : estadoDb,
         nombre: _searchCtrl.text,
       );
       setState(() { _proyectos = data; _loading = false; });
@@ -79,9 +86,9 @@ class _ListaProyectosScreenState extends State<ListaProyectosScreen> {
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-              itemCount: _estados.length,
+              itemCount: _estadosMap.length,
               itemBuilder: (_, i) {
-                final e = _estados[i];
+                final e = _estadosMap.keys.elementAt(i);
                 return Padding(
                   padding: const EdgeInsets.only(right: 8),
                   child: FilterChip(
@@ -154,7 +161,7 @@ class _ProyectoCard extends StatelessWidget {
                   const Icon(Icons.calendar_today_outlined,
                       size: 14, color: Colors.grey),
                   const SizedBox(width: 4),
-                  Text(p.fechaInicio,
+                  Text(formatearFechaHora(p.fechaInicio),
                       style:
                           const TextStyle(fontSize: 12, color: Colors.grey)),
                 ],

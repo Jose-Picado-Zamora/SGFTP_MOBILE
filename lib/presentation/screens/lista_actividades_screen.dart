@@ -22,7 +22,13 @@ class _ListaActividadesScreenState extends State<ListaActividadesScreen> {
   bool _loading = true;
   String? _error;
 
-  final _estados = ['Todas', 'En curso', 'Pendiente', 'Completada'];
+  final _estadosMap = {
+    'Todas': '',
+    'Ejecución': 'execution',
+    'Terminado': 'finished',
+    'Planificación': 'planning',
+    'Pendiente': 'pending',
+  };
 
   @override
   void initState() {
@@ -33,9 +39,10 @@ class _ListaActividadesScreenState extends State<ListaActividadesScreen> {
   Future<void> _cargar() async {
     setState(() { _loading = true; _error = null; });
     try {
+      final estadoDb = _estadosMap[_estadoFiltro] ?? '';
       final data = await _repo.getActividades(
         widget.proyectoId,
-        estado: _estadoFiltro,
+        estado: estadoDb.isEmpty ? null : estadoDb,
         desde: _rango?.start,
         hasta: _rango?.end,
       );
@@ -76,9 +83,9 @@ class _ListaActividadesScreenState extends State<ListaActividadesScreen> {
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-              itemCount: _estados.length,
+              itemCount: _estadosMap.length,
               itemBuilder: (_, i) {
-                final e = _estados[i];
+                final e = _estadosMap.keys.elementAt(i);
                 return Padding(
                   padding: const EdgeInsets.only(right: 8),
                   child: FilterChip(
@@ -153,7 +160,7 @@ class _ActividadCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final enCurso = a.estado == 'En curso';
+    final enCurso = a.estado.toLowerCase() == 'execution';
     return Card(
       child: InkWell(
         onTap: () => context.push('/actividades/${a.id}'),
@@ -199,7 +206,7 @@ class _ActividadCard extends StatelessWidget {
                         const Icon(Icons.group_outlined,
                             size: 13, color: Colors.grey),
                         const SizedBox(width: 4),
-                        Text('${a.voluntariosIds.length} voluntarios',
+                        Text('${a.enrolledCount} voluntarios',
                             style: const TextStyle(
                                 fontSize: 12, color: Colors.grey)),
                       ],

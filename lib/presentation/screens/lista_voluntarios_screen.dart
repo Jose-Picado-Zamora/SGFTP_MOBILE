@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import '../../data/models/voluntario.dart';
 import '../../data/repositories/sgftp_repository.dart';
 import '../widgets/common_widgets.dart';
+import '../../theme/app_theme.dart';
 
 class ListaVoluntariosScreen extends StatefulWidget {
   const ListaVoluntariosScreen({super.key});
@@ -52,7 +53,7 @@ class _ListaVoluntariosScreenState extends State<ListaVoluntariosScreen> {
             padding: const EdgeInsets.fromLTRB(16, 12, 16, 8),
             child: SearchBar(
               controller: _searchCtrl,
-              hintText: 'Buscar por nombre o cédula...',
+              hintText: 'Buscar por nombre o email...',
               leading: const Icon(Icons.search),
               trailing: _searchCtrl.text.isNotEmpty
                   ? [

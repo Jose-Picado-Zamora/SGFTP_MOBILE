@@ -41,17 +41,35 @@ ThemeData buildAppTheme() {
 }
 
 Color estadoColor(String estado) {
-  switch (estado) {
-    case 'Activo':
-    case 'En curso':
-      return const Color(0xFF2E7D32);
-    case 'Inactivo':
-    case 'Pendiente':
-      return const Color(0xFFE65100);
-    case 'Completado':
-    case 'Completada':
-      return const Color(0xFF1565C0);
+  switch (estado.toLowerCase()) {
+    case 'execution':
+    case 'ejecución':
+      return const Color(0xFF2E7D32); // Verde
+    case 'finished':
+    case 'terminado':
+    case 'completado':
+      return const Color(0xFF1565C0); // Azul
+    case 'planning':
+    case 'planificación':
+    case 'pending':
+    case 'pendiente':
+      return const Color(0xFFE65100); // Naranja
     default:
       return Colors.grey;
+  }
+}
+
+String traductorEstado(String estado) {
+  switch (estado.toLowerCase()) {
+    case 'execution':
+      return 'Ejecución';
+    case 'finished':
+      return 'Terminado';
+    case 'planning':
+      return 'Planificación';
+    case 'pending':
+      return 'Pendiente';
+    default:
+      return estado;
   }
 }

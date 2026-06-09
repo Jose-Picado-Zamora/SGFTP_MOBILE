@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../../data/models/voluntario.dart';
-import '../../data/models/proyecto.dart';
 import '../../data/models/actividad.dart';
 import '../../data/repositories/sgftp_repository.dart';
 import '../widgets/common_widgets.dart';
 import '../../theme/app_theme.dart';
+import '../../utils/date_formatter.dart';
 
 class PerfilVoluntarioScreen extends StatefulWidget {
   final int voluntarioId;
@@ -18,7 +18,6 @@ class PerfilVoluntarioScreen extends StatefulWidget {
 
 class _PerfilVoluntarioScreenState extends State<PerfilVoluntarioScreen> {
   Voluntario? _voluntario;
-  List<Proyecto> _proyectos = [];
   List<Actividad> _actividades = [];
   bool _loading = true;
   String? _error;
@@ -34,11 +33,9 @@ class _PerfilVoluntarioScreenState extends State<PerfilVoluntarioScreen> {
     try {
       final repo = SgftpRepository.instance;
       final v = await repo.getVoluntario(widget.voluntarioId);
-      final ps = await repo.getProyectosByIds(v.proyectosIds);
-      final as_ = await repo.getActividadesByIds(v.actividadesIds);
+      final as_ = await repo.getActividadesByVoluntarioId(widget.voluntarioId);
       setState(() {
         _voluntario = v;
-        _proyectos = ps;
         _actividades = as_;
         _loading = false;
       });
@@ -91,26 +88,29 @@ class _PerfilVoluntarioScreenState extends State<PerfilVoluntarioScreen> {
                   titulo: 'Información de contacto',
                   child: Column(
                     children: [
-                      _InfoRow(Icons.badge_outlined, 'Cédula', v.cedula),
+                      _InfoRow(Icons.badge_outlined, 'ID de Voluntario', v.cedula),
                       const Divider(height: 16),
                       _InfoRow(Icons.email_outlined, 'Correo', v.correo),
                       const Divider(height: 16),
-                      _InfoRow(Icons.phone_outlined, 'Teléfono', v.telefono),
+                      _InfoRow(Icons.phone_outlined, 'Teléfono principal', v.telefono),
+                      if (v.telefonoSecundario != null) ...[
+                        const Divider(height: 16),
+                        _InfoRow(Icons.phone_android_outlined, 'Teléfono secundario', v.telefonoSecundario!),
+                      ],
                     ],
                   ),
                 ),
                 const SizedBox(height: 16),
 
                 _Seccion(
-                  titulo: 'Proyectos asociados (${_proyectos.length})',
-                  child: _proyectos.isEmpty
-                      ? const Text('Sin proyectos',
-                          style: TextStyle(color: Colors.grey))
-                      : Column(
-                          children: _proyectos
-                              .map((p) => _ProyectoMini(p))
-                              .toList(),
-                        ),
+                  titulo: 'Información de registro',
+                  child: Column(
+                    children: [
+                      _InfoRow(Icons.calendar_today_outlined, 'Fecha de registro', formatearFechaHora(v.registrationDate)),
+                      const Divider(height: 16),
+                      _InfoRow(Icons.update_outlined, 'Última actualización', formatearFechaHora(v.updatedAt)),
+                    ],
+                  ),
                 ),
                 const SizedBox(height: 16),
 
@@ -156,31 +156,6 @@ class _InfoRow extends StatelessWidget {
           ],
         ),
       ],
-    );
-  }
-}
-
-class _ProyectoMini extends StatelessWidget {
-  final Proyecto p;
-  const _ProyectoMini(this.p);
-
-  @override
-  Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () => context.push('/proyectos/${p.id}'),
-      borderRadius: BorderRadius.circular(8),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 6),
-        child: Row(
-          children: [
-            Icon(Icons.folder_outlined, size: 16, color: kPrimary),
-            const SizedBox(width: 10),
-            Expanded(
-                child: Text(p.nombre, style: const TextStyle(fontSize: 13))),
-            EstadoBadge(p.estado),
-          ],
-        ),
-      ),
     );
   }
 }
