@@ -1,0 +1,233 @@
+{
+  "proyectos": [
+    {
+      "id": 1,
+      "nombre": "Reforestación Manglar Nicoya",
+      "estado": "Activo",
+      "descripcion": "Proyecto de recuperación del ecosistema de manglar en las costas de Nicoya mediante siembra de mangle rojo, blanco y negro. Incluye monitoreo mensual de biodiversidad y capacitación a comunidades locales.",
+      "fecha_inicio": "2025-01-15",
+      "fecha_fin_estimada": "2025-12-31",
+      "responsable": "Ing. María Solís Mora",
+      "progreso": 65,
+      "actividades": [1, 2, 3]
+    },
+    {
+      "id": 2,
+      "nombre": "Educación Ambiental Escuelas Chorotega",
+      "estado": "Activo",
+      "descripcion": "Programa de visitas educativas a 12 escuelas de la región Chorotega para fomentar la conciencia ambiental en niños de primaria. Se desarrollan talleres interactivos sobre biodiversidad, agua y manejo de residuos.",
+      "fecha_inicio": "2025-03-01",
+      "fecha_fin_estimada": "2025-11-30",
+      "responsable": "Lic. Ana Quesada Brenes",
+      "progreso": 40,
+      "actividades": [4, 5]
+    },
+    {
+      "id": 3,
+      "nombre": "Limpieza de Playas Carrillo",
+      "estado": "Completado",
+      "descripcion": "Campaña trimestral de limpieza de playas del Pacífico Norte con participación comunitaria. Se recolectó y clasificó más de 2 toneladas de residuos durante las tres jornadas realizadas.",
+      "fecha_inicio": "2024-07-01",
+      "fecha_fin_estimada": "2024-12-15",
+      "responsable": "Biol. Luis Fonseca Arias",
+      "progreso": 100,
+      "actividades": [6, 7]
+    },
+    {
+      "id": 4,
+      "nombre": "Monitoreo Tortugas Baulas",
+      "estado": "Activo",
+      "descripcion": "Programa nocturno de monitoreo y protección de nidos de tortuga baula en playa Ostional. Incluye conteo de hembras anidantes, marcaje y registro de datos de incubación.",
+      "fecha_inicio": "2025-06-01",
+      "fecha_fin_estimada": "2026-02-28",
+      "responsable": "Biol. Carmen Vargas Jiménez",
+      "progreso": 20,
+      "actividades": [8]
+    },
+    {
+      "id": 5,
+      "nombre": "Huertos Comunitarios Nicoya",
+      "estado": "Inactivo",
+      "descripcion": "Establecimiento de huertos orgánicos en cinco comunidades rurales de Nicoya para promover la seguridad alimentaria y técnicas de agricultura sostenible.",
+      "fecha_inicio": "2025-02-01",
+      "fecha_fin_estimada": "2025-08-31",
+      "responsable": "Ing. Roberto Aguilar Soto",
+      "progreso": 30,
+      "actividades": [9, 10]
+    }
+  ],
+  "actividades": [
+    {
+      "id": 1,
+      "proyecto_id": 1,
+      "nombre": "Siembra Zona Norte Manglar",
+      "estado": "Completada",
+      "descripcion": "Siembra de 500 plantones de mangle rojo en el sector norte del manglar. Participaron 15 voluntarios en jornada de 8 horas con guía de biólogo marino.",
+      "fecha": "2025-02-20",
+      "voluntarios_ids": [1, 2, 4]
+    },
+    {
+      "id": 2,
+      "proyecto_id": 1,
+      "nombre": "Monitoreo Biodiversidad Trimestral",
+      "estado": "En curso",
+      "descripcion": "Levantamiento de inventario de fauna y flora en las zonas de siembra del trimestre anterior. Se registran aves, crustáceos y peces mediante transectos y puntos de conteo.",
+      "fecha": "2025-06-10",
+      "voluntarios_ids": [1, 3, 5]
+    },
+    {
+      "id": 3,
+      "proyecto_id": 1,
+      "nombre": "Taller Comunidad Pescadores",
+      "estado": "Pendiente",
+      "descripcion": "Taller de sensibilización para pescadores locales sobre la importancia del manglar como zona de reproducción y su relación con la pesca sostenible.",
+      "fecha": "2025-07-15",
+      "voluntarios_ids": [2, 6]
+    },
+    {
+      "id": 4,
+      "proyecto_id": 2,
+      "nombre": "Visita Escuela Central Nicoya",
+      "estado": "Completada",
+      "descripcion": "Taller interactivo de educación ambiental con 120 estudiantes de primaria. Actividades de clasificación de residuos, lectura de cuentos ecológicos y manualidades con materiales reciclados.",
+      "fecha": "2025-04-05",
+      "voluntarios_ids": [3, 4, 7]
+    },
+    {
+      "id": 5,
+      "proyecto_id": 2,
+      "nombre": "Visita Escuela Sámara",
+      "estado": "En curso",
+      "descripcion": "Segunda visita del programa a la escuela de Sámara. Enfoque en el cuidado del mar y los arrecifes de coral con presentación de video y actividad de snorkel en área protegida cercana.",
+      "fecha": "2025-06-12",
+      "voluntarios_ids": [4, 5]
+    },
+    {
+      "id": 6,
+      "proyecto_id": 3,
+      "nombre": "Jornada Limpieza Playa Carrillo",
+      "estado": "Completada",
+      "descripcion": "Primera jornada de limpieza con participación de 40 voluntarios y 60 estudiantes universitarios. Se recolectaron 850 kg de residuos sólidos clasificados en plástico, vidrio y metal.",
+      "fecha": "2024-09-14",
+      "voluntarios_ids": [1, 6, 7, 8]
+    },
+    {
+      "id": 7,
+      "proyecto_id": 3,
+      "nombre": "Jornada Limpieza Playa Guiones",
+      "estado": "Completada",
+      "descripcion": "Segunda jornada en Playa Guiones con colaboración de surfistas locales y operadores turísticos. Se recolectaron 1,150 kg de residuos y se colocaron señales informativas.",
+      "fecha": "2024-11-09",
+      "voluntarios_ids": [2, 3, 8]
+    },
+    {
+      "id": 8,
+      "proyecto_id": 4,
+      "nombre": "Primera Noche de Monitoreo",
+      "estado": "En curso",
+      "descripcion": "Inicio del monitoreo nocturno en temporada alta de anidamiento. Equipos de 3 voluntarios rotan en turnos de 4 horas para registro de tortugas, medición de huellas y protección de nidos.",
+      "fecha": "2025-06-08",
+      "voluntarios_ids": [3, 5, 6]
+    },
+    {
+      "id": 9,
+      "proyecto_id": 5,
+      "nombre": "Preparación de Terrenos",
+      "estado": "Completada",
+      "descripcion": "Limpieza y preparación de los cinco terrenos comunitarios asignados para los huertos. Análisis de suelo y trazado de camas de cultivo.",
+      "fecha": "2025-02-28",
+      "voluntarios_ids": [7, 8]
+    },
+    {
+      "id": 10,
+      "proyecto_id": 5,
+      "nombre": "Taller de Compostaje",
+      "estado": "Pendiente",
+      "descripcion": "Capacitación a familias beneficiarias sobre elaboración de compost casero y lombricultura para mejorar la fertilidad del suelo sin insumos químicos.",
+      "fecha": "2025-07-20",
+      "voluntarios_ids": [7]
+    }
+  ],
+  "voluntarios": [
+    {
+      "id": 1,
+      "nombre": "Carlos Mendoza Rojas",
+      "cedula": "503210456",
+      "estado": "Activo",
+      "correo": "cmendoza@correo.com",
+      "telefono": "+506 8834-5621",
+      "proyectos_ids": [1, 3],
+      "actividades_ids": [1, 2, 6]
+    },
+    {
+      "id": 2,
+      "nombre": "Sofía Herrera Blanco",
+      "cedula": "112340789",
+      "estado": "Activo",
+      "correo": "sherrera@correo.com",
+      "telefono": "+506 7712-3398",
+      "proyectos_ids": [1, 3],
+      "actividades_ids": [1, 3, 7]
+    },
+    {
+      "id": 3,
+      "nombre": "Diego Morales Castro",
+      "cedula": "205671234",
+      "estado": "Activo",
+      "correo": "dmorales@correo.com",
+      "telefono": "+506 8990-4412",
+      "proyectos_ids": [1, 2, 3, 4],
+      "actividades_ids": [2, 4, 7, 8]
+    },
+    {
+      "id": 4,
+      "nombre": "Laura Jiménez Vega",
+      "cedula": "304561890",
+      "estado": "Activo",
+      "correo": "ljimenez@correo.com",
+      "telefono": "+506 8221-6754",
+      "proyectos_ids": [1, 2],
+      "actividades_ids": [1, 4, 5]
+    },
+    {
+      "id": 5,
+      "nombre": "Andrés Solano Quirós",
+      "cedula": "401892345",
+      "estado": "Activo",
+      "correo": "asolano@correo.com",
+      "telefono": "+506 7654-8832",
+      "proyectos_ids": [1, 2, 4],
+      "actividades_ids": [2, 5, 8]
+    },
+    {
+      "id": 6,
+      "nombre": "Valeria Ramírez Torres",
+      "cedula": "503218901",
+      "estado": "Activo",
+      "correo": "vramirez@correo.com",
+      "telefono": "+506 8345-1167",
+      "proyectos_ids": [1, 3, 4],
+      "actividades_ids": [3, 6, 8]
+    },
+    {
+      "id": 7,
+      "nombre": "Fabio Núñez Cordero",
+      "cedula": "112348902",
+      "estado": "Inactivo",
+      "correo": "fnunez@correo.com",
+      "telefono": "+506 7890-2234",
+      "proyectos_ids": [2, 3, 5],
+      "actividades_ids": [4, 6, 9]
+    },
+    {
+      "id": 8,
+      "nombre": "Priscilla Ulate Gamboa",
+      "cedula": "205679013",
+      "estado": "Activo",
+      "correo": "pulate@correo.com",
+      "telefono": "+506 8567-4490",
+      "proyectos_ids": [3, 5],
+      "actividades_ids": [6, 7, 9]
+    }
+  ]
+}
