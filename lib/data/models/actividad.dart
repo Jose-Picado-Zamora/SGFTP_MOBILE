@@ -19,13 +19,15 @@ class Actividad {
 
   factory Actividad.fromJson(Map<String, dynamic> json) {
     return Actividad(
-      id: json['id'],
-      proyectoId: json['proyecto_id'],
-      nombre: json['nombre'],
-      estado: json['estado'],
-      descripcion: json['descripcion'],
-      fecha: json['fecha'],
-      voluntariosIds: List<int>.from(json['voluntarios_ids']),
+      id: json['id_activity'] ?? json['id'],
+      proyectoId: json['proyecto_id'] ?? 0,
+      nombre: json['name'] ?? json['nombre'],
+      estado: json['estado'] ?? 'Pendiente',
+      descripcion: json['description'] ?? json['descripcion'],
+      fecha: json['fecha'] ?? DateTime.now().toString(),
+      voluntariosIds: json['voluntarios_ids'] != null
+          ? List<int>.from(json['voluntarios_ids'])
+          : [],
     );
   }
 }

@@ -21,14 +21,18 @@ class Voluntario {
 
   factory Voluntario.fromJson(Map<String, dynamic> json) {
     return Voluntario(
-      id: json['id'],
-      nombre: json['nombre'],
-      cedula: json['cedula'],
-      estado: json['estado'],
-      correo: json['correo'],
-      telefono: json['telefono'],
-      proyectosIds: List<int>.from(json['proyectos_ids']),
-      actividadesIds: List<int>.from(json['actividades_ids']),
+      id: json['id_volunteer'] ?? json['id'],
+      nombre: json['nombre'] ?? '',
+      cedula: json['cedula'] ?? '',
+      estado: json['estado'] ?? 'Activo',
+      correo: json['correo'] ?? json['email'] ?? '',
+      telefono: json['telefono'] ?? json['phone_primary'] ?? '',
+      proyectosIds: json['proyectos_ids'] != null
+          ? List<int>.from(json['proyectos_ids'])
+          : [],
+      actividadesIds: json['actividades_ids'] != null
+          ? List<int>.from(json['actividades_ids'])
+          : [],
     );
   }
 

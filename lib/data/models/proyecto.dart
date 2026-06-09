@@ -7,7 +7,6 @@ class Proyecto {
   final String fechaFinEstimada;
   final String responsable;
   final int progreso;
-  final List<int> actividadesIds;
 
   Proyecto({
     required this.id,
@@ -18,20 +17,18 @@ class Proyecto {
     required this.fechaFinEstimada,
     required this.responsable,
     required this.progreso,
-    required this.actividadesIds,
   });
 
   factory Proyecto.fromJson(Map<String, dynamic> json) {
     return Proyecto(
-      id: json['id'],
-      nombre: json['nombre'],
-      estado: json['estado'],
-      descripcion: json['descripcion'],
-      fechaInicio: json['fecha_inicio'],
-      fechaFinEstimada: json['fecha_fin_estimada'],
-      responsable: json['responsable'],
-      progreso: json['progreso'],
-      actividadesIds: List<int>.from(json['actividades']),
+      id: json['id_project'] ?? json['id'],
+      nombre: json['name'] ?? json['nombre'],
+      estado: json['estado'] ?? 'Activo',
+      descripcion: json['description'] ?? json['descripcion'],
+      fechaInicio: json['start_date'] ?? json['fecha_inicio'],
+      fechaFinEstimada: json['fecha_fin_estimada'] ?? '',
+      responsable: json['responsable'] ?? '',
+      progreso: json['progreso'] ?? 0,
     );
   }
 }
