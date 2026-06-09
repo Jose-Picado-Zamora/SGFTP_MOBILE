@@ -5,7 +5,6 @@ import '../../data/models/actividad.dart';
 import '../../data/repositories/sgftp_repository.dart';
 import '../widgets/common_widgets.dart';
 import '../../theme/app_theme.dart';
-import '../../utils/date_formatter.dart';
 
 class ListaActividadesScreen extends StatefulWidget {
   final int proyectoId;

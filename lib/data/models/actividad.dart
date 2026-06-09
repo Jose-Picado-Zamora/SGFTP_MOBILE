@@ -1,3 +1,5 @@
+import 'date_activity.dart';
+
 class Actividad {
   final int id;
   final String nombre;
@@ -15,6 +17,16 @@ class Actividad {
   final String? metricActivity;
   final int? totalMetricValue;
   final String? registrationDate;
+  final String? updatedAt;
+  final String? url1;
+  final String? url2;
+  final String? url3;
+  final int? availableSpaces;
+  final int idProject;
+  final String conditions;
+  final String observations;
+  final String aim;
+  final List<DateActivity> fechas;
 
   Actividad({
     required this.id,
@@ -33,6 +45,16 @@ class Actividad {
     this.metricActivity,
     this.totalMetricValue,
     this.registrationDate,
+    this.updatedAt,
+    this.url1,
+    this.url2,
+    this.url3,
+    this.availableSpaces,
+    required this.idProject,
+    required this.conditions,
+    required this.observations,
+    required this.aim,
+    this.fechas = const [],
   });
 
   factory Actividad.fromJson(Map<String, dynamic> json) {
@@ -53,6 +75,16 @@ class Actividad {
       metricActivity: json['Metric_activity'],
       totalMetricValue: json['Total_metric_value'],
       registrationDate: json['Registration_date'],
+      updatedAt: json['UpdatedAt'],
+      url1: json['url1'],
+      url2: json['url2'],
+      url3: json['url3'],
+      availableSpaces: json['Available_spaces'],
+      idProject: json['Id_project'] ?? json['id_project'] ?? 0,
+      conditions: json['Conditions'] ?? '',
+      observations: json['Observations'] ?? '',
+      aim: json['Aim'] ?? '',
+      fechas: (json['fechas'] as List?)?.map((f) => DateActivity.fromJson(f)).toList() ?? [],
     );
   }
 

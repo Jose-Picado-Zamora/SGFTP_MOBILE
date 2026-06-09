@@ -97,7 +97,12 @@
       "url1": "https://example.com/siembra-1.jpg",
       "url2": null,
       "url3": null,
-      "Enrolled_count": 15
+      "Enrolled_count": 15,
+      "Available_spaces": 5,
+      "Id_project": 1,
+      "Conditions": "Ropa cómoda, botas de lluvia, protector solar",
+      "Observations": "Se proporcionará equipo de protección y transporte desde el punto de encuentro",
+      "Aim": "Recuperar 500 hectáreas de manglar antes de 2026"
     },
     {
       "Id_activity": 2,
@@ -119,7 +124,12 @@
       "url1": "https://example.com/monitoreo-1.jpg",
       "url2": null,
       "url3": null,
-      "Enrolled_count": 8
+      "Enrolled_count": 8,
+      "Available_spaces": 2,
+      "Id_project": 1,
+      "Conditions": "Experiencia en identificación de especies, binoculares preferiblemente",
+      "Observations": "Actividad trimestral para seguimiento del ecosistema",
+      "Aim": "Monitorear la recuperación de biodiversidad en zonas restauradas"
     },
     {
       "Id_activity": 3,
@@ -141,7 +151,12 @@
       "url1": null,
       "url2": null,
       "url3": null,
-      "Enrolled_count": 3
+      "Enrolled_count": 3,
+      "Available_spaces": 2,
+      "Id_project": 2,
+      "Conditions": "Experiencia en educación ambiental, disponibilidad horaria matutina",
+      "Observations": "Material educativo proporcionado por la fundación",
+      "Aim": "Impactar 1200 estudiantes con contenido ambiental"
     },
     {
       "Id_activity": 4,
@@ -163,7 +178,12 @@
       "url1": "https://example.com/limpieza-1.jpg",
       "url2": null,
       "url3": null,
-      "Enrolled_count": 40
+      "Enrolled_count": 40,
+      "Available_spaces": 10,
+      "Id_project": 3,
+      "Conditions": "Ropa de playa, protector solar, hidratación",
+      "Observations": "Se proporcionarán guantes, bolsas y equipos de clasificación",
+      "Aim": "Mantener playas limpias durante todo el año"
     }
   ],
   "date_activity": [

@@ -5,6 +5,7 @@ import '../../data/models/actividad.dart';
 import '../../data/repositories/sgftp_repository.dart';
 import '../widgets/common_widgets.dart';
 import '../../theme/app_theme.dart';
+import '../../utils/date_formatter.dart';
 
 class PerfilVoluntarioScreen extends StatefulWidget {
   final int voluntarioId;
@@ -91,7 +92,23 @@ class _PerfilVoluntarioScreenState extends State<PerfilVoluntarioScreen> {
                       const Divider(height: 16),
                       _InfoRow(Icons.email_outlined, 'Correo', v.correo),
                       const Divider(height: 16),
-                      _InfoRow(Icons.phone_outlined, 'Teléfono', v.telefono),
+                      _InfoRow(Icons.phone_outlined, 'Teléfono principal', v.telefono),
+                      if (v.telefonoSecundario != null) ...[
+                        const Divider(height: 16),
+                        _InfoRow(Icons.phone_android_outlined, 'Teléfono secundario', v.telefonoSecundario!),
+                      ],
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 16),
+
+                _Seccion(
+                  titulo: 'Información de registro',
+                  child: Column(
+                    children: [
+                      _InfoRow(Icons.calendar_today_outlined, 'Fecha de registro', formatearFechaHora(v.registrationDate)),
+                      const Divider(height: 16),
+                      _InfoRow(Icons.update_outlined, 'Última actualización', formatearFechaHora(v.updatedAt)),
                     ],
                   ),
                 ),

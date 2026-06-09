@@ -161,7 +161,7 @@ class _ProyectoCard extends StatelessWidget {
                   const Icon(Icons.calendar_today_outlined,
                       size: 14, color: Colors.grey),
                   const SizedBox(width: 4),
-                  Text(formatearFecha(p.fechaInicio),
+                  Text(formatearFechaHora(p.fechaInicio),
                       style:
                           const TextStyle(fontSize: 12, color: Colors.grey)),
                 ],

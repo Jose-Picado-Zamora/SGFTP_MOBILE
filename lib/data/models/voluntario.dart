@@ -6,6 +6,7 @@ class Voluntario {
   final String? telefonoSecundario;
   final int isActive;
   final String registrationDate;
+  final String updatedAt;
   final int idPerson;
 
   Voluntario({
@@ -16,6 +17,7 @@ class Voluntario {
     this.telefonoSecundario,
     required this.isActive,
     required this.registrationDate,
+    required this.updatedAt,
     required this.idPerson,
   });
 
@@ -28,6 +30,7 @@ class Voluntario {
       telefonoSecundario: json['phone_secondary'] ?? json['telefono_secundario'],
       isActive: json['is_active'] ?? 1,
       registrationDate: json['registration_date'] ?? DateTime.now().toString(),
+      updatedAt: json['updated_at'] ?? DateTime.now().toString(),
       idPerson: json['id_person'] ?? 0,
     );
   }

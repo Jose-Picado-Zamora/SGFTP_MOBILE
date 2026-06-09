@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import '../models/proyecto.dart';
 import '../models/actividad.dart';
 import '../models/voluntario.dart';
+import '../models/date_activity.dart';
 
 class SgftpRepository {
   static SgftpRepository? _instance;
@@ -50,7 +51,16 @@ class SgftpRepository {
   Future<Actividad> getActividad(int id) async {
     await _ensureLoaded();
     final json = (_db!['activity'] as List).firstWhere((j) => j['Id_activity'] == id);
+    final fechas = await getDateActivitiesByActividadId(id);
+    json['fechas'] = fechas.map((f) => f.toJson()).toList();
     return Actividad.fromJson(json);
+  }
+
+  Future<List<DateActivity>> getDateActivitiesByActividadId(int actividadId) async {
+    await _ensureLoaded();
+    return (_db!['date_activity'] as List?)?.where((j) => j['Id_activity'] == actividadId)
+        .map((j) => DateActivity.fromJson(j))
+        .toList() ?? [];
   }
 
   Future<List<Voluntario>> getVoluntarios({String? query}) async {
