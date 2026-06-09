@@ -64,7 +64,6 @@ class _PerfilVoluntarioScreenState extends State<PerfilVoluntarioScreen> {
     return SingleChildScrollView(
       child: Column(
         children: [
-          // Header
           Container(
             width: double.infinity,
             color: kPrimary,

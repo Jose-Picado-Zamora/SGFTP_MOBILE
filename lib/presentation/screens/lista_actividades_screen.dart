@@ -71,7 +71,6 @@ class _ListaActividadesScreenState extends State<ListaActividadesScreen> {
       appBar: AppBar(title: const Text('Actividades')),
       body: Column(
         children: [
-          // Filter chips
           SizedBox(
             height: 52,
             child: ListView.builder(
@@ -96,7 +95,6 @@ class _ListaActividadesScreenState extends State<ListaActividadesScreen> {
               },
             ),
           ),
-          // Date range picker
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child: Row(

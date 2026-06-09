@@ -26,8 +26,7 @@ class DashboardScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Header verde
-            Container(
+              Container(
               width: double.infinity,
               color: kPrimary,
               padding: const EdgeInsets.fromLTRB(24, 0, 24, 28),

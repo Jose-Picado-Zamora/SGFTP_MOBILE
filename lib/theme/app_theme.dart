@@ -40,7 +40,6 @@ ThemeData buildAppTheme() {
   );
 }
 
-// Colores de estado
 Color estadoColor(String estado) {
   switch (estado) {
     case 'Activo':

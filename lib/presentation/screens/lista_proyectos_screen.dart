@@ -53,7 +53,6 @@ class _ListaProyectosScreenState extends State<ListaProyectosScreen> {
       appBar: AppBar(title: const Text('Proyectos')),
       body: Column(
         children: [
-          // Barra de búsqueda
           Padding(
             padding: const EdgeInsets.fromLTRB(16, 12, 16, 0),
             child: SearchBar(
@@ -75,7 +74,6 @@ class _ListaProyectosScreenState extends State<ListaProyectosScreen> {
                   EdgeInsets.symmetric(horizontal: 16)),
             ),
           ),
-          // Filter chips
           SizedBox(
             height: 52,
             child: ListView.builder(
@@ -100,7 +98,6 @@ class _ListaProyectosScreenState extends State<ListaProyectosScreen> {
               },
             ),
           ),
-          // Lista
           Expanded(
             child: _loading
                 ? const LoadingCenter()

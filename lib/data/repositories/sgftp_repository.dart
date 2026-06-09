@@ -13,13 +13,11 @@ class SgftpRepository {
 
   Future<void> _ensureLoaded() async {
     if (_db != null) return;
-    // Simula latencia de red
     await Future.delayed(const Duration(milliseconds: 600));
     final raw = await rootBundle.loadString('assets/data/db.json');
     _db = jsonDecode(raw);
   }
 
-  // GET /proyectos
   Future<List<Proyecto>> getProyectos({String? estado, String? nombre}) async {
     await _ensureLoaded();
     List<Proyecto> lista = (_db!['proyectos'] as List)
@@ -35,14 +33,12 @@ class SgftpRepository {
     return lista;
   }
 
-  // GET /proyectos/{id}
   Future<Proyecto> getProyecto(int id) async {
     await _ensureLoaded();
     final json = (_db!['proyectos'] as List).firstWhere((j) => j['id'] == id);
     return Proyecto.fromJson(json);
   }
 
-  // GET /proyectos/{id}/actividades
   Future<List<Actividad>> getActividades(int proyectoId,
       {String? estado, DateTime? desde, DateTime? hasta}) async {
     await _ensureLoaded();
@@ -66,14 +62,12 @@ class SgftpRepository {
     return lista;
   }
 
-  // GET /actividades/{id}
   Future<Actividad> getActividad(int id) async {
     await _ensureLoaded();
     final json = (_db!['actividades'] as List).firstWhere((j) => j['id'] == id);
     return Actividad.fromJson(json);
   }
 
-  // GET /voluntarios
   Future<List<Voluntario>> getVoluntarios({String? query}) async {
     await _ensureLoaded();
     List<Voluntario> lista = (_db!['voluntarios'] as List)
@@ -89,14 +83,12 @@ class SgftpRepository {
     return lista;
   }
 
-  // GET /voluntarios/{id}
   Future<Voluntario> getVoluntario(int id) async {
     await _ensureLoaded();
     final json = (_db!['voluntarios'] as List).firstWhere((j) => j['id'] == id);
     return Voluntario.fromJson(json);
   }
 
-  // GET /voluntarios?ids=[...]  (helper para cargar lista por IDs)
   Future<List<Voluntario>> getVoluntariosByIds(List<int> ids) async {
     await _ensureLoaded();
     return (_db!['voluntarios'] as List)

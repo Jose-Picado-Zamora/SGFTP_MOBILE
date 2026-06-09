@@ -62,7 +62,6 @@ class _DetalleActividadScreenState extends State<DetalleActividadScreen> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Header
           Container(
             width: double.infinity,
             padding: const EdgeInsets.all(20),

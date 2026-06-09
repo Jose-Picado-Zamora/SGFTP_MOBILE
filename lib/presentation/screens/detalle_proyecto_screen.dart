@@ -54,7 +54,6 @@ class _DetalleProyectoScreenState extends State<DetalleProyectoScreen> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Header
           Container(
             width: double.infinity,
             padding: const EdgeInsets.all(20),
@@ -95,11 +94,9 @@ class _DetalleProyectoScreenState extends State<DetalleProyectoScreen> {
           ),
           const SizedBox(height: 20),
 
-          // Progreso
           _Seccion(titulo: 'Avance del Proyecto', child: BarraProgreso(p.progreso)),
           const SizedBox(height: 16),
 
-          // Fechas
           _Seccion(
             titulo: 'Fechas',
             child: Row(
@@ -111,7 +108,6 @@ class _DetalleProyectoScreenState extends State<DetalleProyectoScreen> {
           ),
           const SizedBox(height: 16),
 
-          // Descripción
           _Seccion(
             titulo: 'Descripción',
             child: Text(
@@ -121,7 +117,6 @@ class _DetalleProyectoScreenState extends State<DetalleProyectoScreen> {
           ),
           const SizedBox(height: 24),
 
-          // Botón actividades
           SizedBox(
             width: double.infinity,
             child: FilledButton.icon(
