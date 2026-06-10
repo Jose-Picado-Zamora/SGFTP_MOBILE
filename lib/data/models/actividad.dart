@@ -93,7 +93,6 @@ class Actividad {
   bool get isOpenForRegistrationBool => openForRegistration == 1;
   bool get isActive => activo == 1;
 
-  // Compatibilidad con código existente
   String get fecha => '';
   int get proyectoId => 0;
   List<int> get voluntariosIds => [];

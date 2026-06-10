@@ -6,7 +6,6 @@ String formatearFecha(String fecha) {
     final dt = DateTime.parse(fecha);
     return DateFormat('dd MMMM yyyy', 'es_ES').format(dt);
   } catch (e) {
-    // Si falla, intentar formato sin milisegundos
     try {
       final dt = DateTime.parse(fecha.split('.')[0]);
       return DateFormat('dd MMMM yyyy', 'es_ES').format(dt);
@@ -22,7 +21,6 @@ String formatearFechaHora(String fecha) {
     final dt = DateTime.parse(fecha);
     return DateFormat('dd MMMM yyyy, HH:mm', 'es_ES').format(dt);
   } catch (e) {
-    // Si falla, intentar formato sin milisegundos
     try {
       final dt = DateTime.parse(fecha.split('.')[0]);
       return DateFormat('dd MMMM yyyy, HH:mm', 'es_ES').format(dt);
@@ -38,7 +36,6 @@ String formatearFechaCorta(String fecha) {
     final dt = DateTime.parse(fecha);
     return DateFormat('dd/MM/yy', 'es_ES').format(dt);
   } catch (e) {
-    // Si falla, intentar formato sin milisegundos
     try {
       final dt = DateTime.parse(fecha.split('.')[0]);
       return DateFormat('dd/MM/yy', 'es_ES').format(dt);
@@ -54,7 +51,6 @@ String formatearHora(String fecha) {
     final dt = DateTime.parse(fecha);
     return DateFormat('HH:mm', 'es_ES').format(dt);
   } catch (e) {
-    // Si falla, intentar formato sin milisegundos
     try {
       final dt = DateTime.parse(fecha.split('.')[0]);
       return DateFormat('HH:mm', 'es_ES').format(dt);
@@ -77,14 +73,12 @@ String formatearRangoFechas(String startDate, String endDate) {
     final end = DateTime.parse(endDate);
     final formattedEnd = DateFormat('dd MMMM, HH:mm', 'es_ES').format(end);
     
-    // Si es el mismo día
     if (start.year == end.year && start.month == end.month && start.day == end.day) {
       return '${DateFormat('dd MMMM', 'es_ES').format(start)}: ${DateFormat('HH:mm', 'es_ES').format(start)} - ${DateFormat('HH:mm', 'es_ES').format(end)}';
     }
     
     return '$formattedStart - $formattedEnd';
   } catch (e) {
-    // Si falla, intentar formato sin milisegundos
     try {
       final start = DateTime.parse(startDate.split('.')[0]);
       final formattedStart = DateFormat('dd MMMM, HH:mm', 'es_ES').format(start);

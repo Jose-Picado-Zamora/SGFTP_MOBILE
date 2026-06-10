@@ -80,7 +80,6 @@ class Proyecto {
   bool get isActive => activo == 1;
   bool get isFinished => estado == 'finished';
 
-  // Compatibilidad con código existente
   String get fechaFinEstimada => fechaFin ?? '';
   String get responsable => '';
   int get progreso => 65; // valor por defecto para compatibilidad

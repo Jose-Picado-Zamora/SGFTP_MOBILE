@@ -43,7 +43,6 @@ class Voluntario {
 
   bool get isActiveVolunteer => isActive == 1;
 
-  // Compatibilidad con código existente
   String get cedula => 'V-$id';
   String get estado => isActive == 1 ? 'Activo' : 'Inactivo';
   String get correo => email;

@@ -38,10 +38,17 @@ class SgftpRepository {
     return Proyecto.fromJson(json);
   }
 
+  int _realEnrolledCount(int actividadId) {
+    return (_db!['activity_enrollment'] as List?)?.where((e) => e['id_activity'] == actividadId).length ?? 0;
+  }
+
   Future<List<Actividad>> getActividades(int proyectoId,
       {String? estado, DateTime? desde, DateTime? hasta}) async {
     await _ensureLoaded();
-    List<Actividad> lista = (_db!['activity'] as List?)?.map((j) => Actividad.fromJson(j)).toList() ?? [];
+    List<Actividad> lista = (_db!['activity'] as List?)?.map((j) {
+      j['Enrolled_count'] = _realEnrolledCount(j['Id_activity']);
+      return Actividad.fromJson(j);
+    }).toList() ?? [];
     if (estado != null && estado != 'Todas') {
       lista = lista.where((a) => a.estado == estado).toList();
     }
@@ -51,6 +58,7 @@ class SgftpRepository {
   Future<Actividad> getActividad(int id) async {
     await _ensureLoaded();
     final json = (_db!['activity'] as List).firstWhere((j) => j['Id_activity'] == id);
+    json['Enrolled_count'] = _realEnrolledCount(id);
     final fechas = await getDateActivitiesByActividadId(id);
     json['fechas'] = fechas.map((f) => f.toJson()).toList();
     return Actividad.fromJson(json);
@@ -138,7 +146,10 @@ class SgftpRepository {
   Future<List<Actividad>> getActividadesByIds(List<int> ids) async {
     await _ensureLoaded();
     return (_db!['activity'] as List?)?.where((j) => ids.contains(j['Id_activity']))
-        .map((j) => Actividad.fromJson(j))
+        .map((j) {
+          j['Enrolled_count'] = _realEnrolledCount(j['Id_activity']);
+          return Actividad.fromJson(j);
+        })
         .toList() ?? [];
   }
 }

@@ -147,10 +147,8 @@ class _DetalleActividadScreenState extends State<DetalleActividadScreen> {
                 _DetalleItem(Icons.people_outline, 'Espacios totales', '${a.espacios}'),
                 const Divider(height: 16),
                 _DetalleItem(Icons.how_to_reg_outlined, 'Inscritos', '${a.enrolledCount}'),
-                if (a.availableSpaces != null) ...[
-                  const Divider(height: 16),
-                  _DetalleItem(Icons.event_seat_outlined, 'Espacios disponibles', '${a.availableSpaces}'),
-                ],
+                const Divider(height: 16),
+                _DetalleItem(Icons.event_seat_outlined, 'Espacios disponibles', '${a.espacios - a.enrolledCount}'),
               ],
             ),
           ),
@@ -202,8 +200,7 @@ class _DetalleActividadScreenState extends State<DetalleActividadScreen> {
               spacing: 8,
               runSpacing: 8,
               children: [
-                if (a.url1 != null) _ImageItem(a.url1!)
-                else _ImageItem('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80'),
+                _ImageItem(a.url1),
                 if (a.url2 != null) _ImageItem(a.url2!),
                 if (a.url3 != null) _ImageItem(a.url3!),
               ],
@@ -302,29 +299,30 @@ class _DetalleItem extends StatelessWidget {
 }
 
 class _ImageItem extends StatelessWidget {
-  final String url;
+  final String? url;
   const _ImageItem(this.url);
 
   @override
   Widget build(BuildContext context) {
+    if (url == null) {
+      return ClipRRect(
+        borderRadius: BorderRadius.circular(8),
+        child: Image.asset('assets/data/imagen_actividad.jpg', width: 100, height: 100, fit: BoxFit.cover),
+      );
+    }
     return ClipRRect(
       borderRadius: BorderRadius.circular(8),
       child: Image.network(
-        url,
+        url!,
         width: 100,
         height: 100,
         fit: BoxFit.cover,
-        errorBuilder: (context, error, stackTrace) {
-          return Container(
-            width: 100,
-            height: 100,
-            decoration: BoxDecoration(
-              color: Colors.grey.shade200,
-              borderRadius: BorderRadius.circular(8),
-            ),
-            child: const Icon(Icons.broken_image, color: Colors.grey),
-          );
-        },
+        errorBuilder: (context, error, stackTrace) => Image.asset(
+          'assets/data/imagen_actividad.jpg',
+          width: 100,
+          height: 100,
+          fit: BoxFit.cover,
+        ),
       ),
     );
   }

@@ -102,8 +102,8 @@ class _DetalleProyectoScreenState extends State<DetalleProyectoScreen> {
             titulo: 'Fechas',
             child: Row(
               children: [
-                Expanded(child: _FechaItem('Inicio', formatearFechaHora(p.fechaInicio), Icons.play_circle_outline)),
-                Expanded(child: _FechaItem('Fin estimado', p.fechaFin != null ? formatearFechaHora(p.fechaFin!) : 'No definido', Icons.flag_outlined)),
+                Expanded(child: _FechaItem('Inicio', formatearFecha(p.fechaInicio), Icons.play_circle_outline)),
+                Expanded(child: _FechaItem('Fin estimado', p.fechaFin != null ? formatearFecha(p.fechaFin!) : 'No definido', Icons.flag_outlined)),
               ],
             ),
           ),
@@ -182,8 +182,7 @@ class _DetalleProyectoScreenState extends State<DetalleProyectoScreen> {
               spacing: 8,
               runSpacing: 8,
               children: [
-                if (p.url1 != null) _ImageItem(p.url1!)
-                else _ImageItem('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80'),
+                _ImageItem(p.url1),
                 if (p.url2 != null) _ImageItem(p.url2!),
                 if (p.url3 != null) _ImageItem(p.url3!),
               ],
@@ -306,29 +305,30 @@ class _MetricaItem extends StatelessWidget {
 }
 
 class _ImageItem extends StatelessWidget {
-  final String url;
+  final String? url;
   const _ImageItem(this.url);
 
   @override
   Widget build(BuildContext context) {
+    if (url == null) {
+      return ClipRRect(
+        borderRadius: BorderRadius.circular(8),
+        child: Image.asset('assets/data/imagen_proyecto.jpg', width: 100, height: 100, fit: BoxFit.cover),
+      );
+    }
     return ClipRRect(
       borderRadius: BorderRadius.circular(8),
       child: Image.network(
-        url,
+        url!,
         width: 100,
         height: 100,
         fit: BoxFit.cover,
-        errorBuilder: (context, error, stackTrace) {
-          return Container(
-            width: 100,
-            height: 100,
-            decoration: BoxDecoration(
-              color: Colors.grey.shade200,
-              borderRadius: BorderRadius.circular(8),
-            ),
-            child: const Icon(Icons.broken_image, color: Colors.grey),
-          );
-        },
+        errorBuilder: (context, error, stackTrace) => Image.asset(
+          'assets/data/imagen_proyecto.jpg',
+          width: 100,
+          height: 100,
+          fit: BoxFit.cover,
+        ),
       ),
     );
   }
